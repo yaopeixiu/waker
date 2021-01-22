@@ -1,0 +1,6 @@
+spring:
+  rabbitmq:
+    addresses: amqp-cn-nif1xktyl001.mq-amqp.cn-shenzhen-429403-a.aliyuncs.com
+    username: MjphbXFwLWNuLW5pZjF4a3R5bDAwMTpMVEFJNEdBVld2SzYxZ1BZWlE3Z3FMZ2M=
+    password: Qjk0QUIxNjFENDg0NUE3MTU2RDRCMjU3REY1Rjk1OEQwQTFDNDdFNToxNjA2Mzc2NzYzMDY5
+    virtual-host: goushijie

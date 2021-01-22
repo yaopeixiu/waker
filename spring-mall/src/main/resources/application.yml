@@ -1,0 +1,24 @@
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  cloud:
+    stream:
+      binders:
+        defaultRabbit:
+          type: rabbit
+      bindings:
+        public_output: #生产者
+          destination: public_push
+          content-type: application/json
+          group: public-group
+
+#  微信小程序配置 appid /appsecret
+wx:
+  mp:
+    configs:
+    - appid: xxx
+      secret: xxx
+      token:
+      aesKey:
+      msgDataFormat:

@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: spring-eureka
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8762/eureka/
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 30000 #清理无效节点的时间间隔，每次主动失效检测间隔为3s
+    response-cache-update-interval-ms: 3000 #eureka server刷新readCacheMap的时间
+    responseCacheAutoExpirationInSeconds: 180
+    peer-eureka-nodes-update-interval-ms: 30
+  instance:
+    lease-renewal-interval-in-seconds: 5
+
+server:
+  port: 8762

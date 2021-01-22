@@ -1,0 +1,46 @@
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  # Single file max size
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+  cloud:
+    stream:
+      binders:
+        defaultRabbit:
+          type: rabbit
+      bindings:
+        scroll_output: #卷轴生产者
+          destination: scroll
+          content-type: application/json
+          group: scroll-group # 进行操作的分组，实际上就表示持久化
+
+security:
+  jwt:
+    secret: K8C]nuGsE.Re7RI0a,E_sP
+ali:
+  oss:
+    endpoint: http://oss-cn-hangzhou.aliyuncs.com
+    accessKeyId: LTAI4FzoLrmaQhwbkpybi6iz
+    accessKeySecret: wQcBblT4kONuqQcxwcSIIbxnR4I8Or
+    yourBucketName: taoke-goushijie
+    #静态文件访问地址
+    URL: https://taoke-goushijie.oss-cn-hangzhou.aliyuncs.com/
+  #实名认证参数
+  realName:
+    accessKeyId: LTAI4G3KmHHvx4AAUVchMHAR
+    secret: dPMcFs6mqtq8VWefSMg8ZQzPDZQhX4
+    sceneId: 1000000782
+#阿里云短信
+sms:
+  accesskey: 4RpwFFWD5LkQZaWo
+  secret: 823Rty52r1IQCmgGGNfsTCWCEPbOPiCC
+  #签名id
+  sign: 204871
+  #模板id
+  templateId: 193889
+  #地址
+  url: http://api.tinree.com/api/v2/single_send
